@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creative Name Plate</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #e8eaf6;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: #283593;
+    }
+
+    #myBox {
+      width: 220px;
+      height: 220px;
+      background-color: skyblue;
+      color: darkblue;
+      border: 3px solid #283593;
+      border-radius: 50%;
+      margin: 25px auto;
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+      cursor: text;
+      word-break: break-word;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .main-controls {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 35px;
+    }
+
+    .circle {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 1.5px solid black;
+      cursor: pointer;
+    }
+
+    .f-btn {
+      padding: 7px 12px;
+      margin: 3px;
+      cursor: pointer;
+      border: 1px solid black;
+      background-color: white;
+      border-radius: 5px;
+    }
+
+    .f-btn:hover {
+      background-color: #c5cae9;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h2>Creative Name Plate</h2>
+
+  <div id="myBox" contenteditable="true">Welcome</div>
+
+  <div class="main-controls">
+
+    <div>
+      <h4>Box Color</h4>
+
+      <button class="circle"
+        style="background-color: skyblue;"
+        onclick="changeBg('skyblue')"></button>
+
+      <button class="circle"
+        style="background-color: lavender;"
+        onclick="changeBg('lavender')"></button>
+
+      <button class="circle"
+        style="background-color: peachpuff;"
+        onclick="changeBg('peachpuff')"></button>
+    </div>
+
+    <div>
+      <h4>Writing Color</h4>
+
+      <button class="circle"
+        style="background-color: darkblue;"
+        onclick="changeText('darkblue')"></button>
+
+      <button class="circle"
+        style="background-color: crimson;"
+        onclick="changeText('crimson')"></button>
+
+      <button class="circle"
+        style="background-color: darkgreen;"
+        onclick="changeText('darkgreen')"></button>
+    </div>
+
+    <div>
+      <h4>Text Style</h4>
+
+      <button class="f-btn"
+        onclick="changeFont('Verdana')">Verdana</button>
+
+      <button class="f-btn"
+        onclick="changeFont('Georgia')">Georgia</button>
+
+      <button class="f-btn"
+        onclick="changeFont('Arial')">Arial</button>
+
+      <button class="f-btn"
+        onclick="changeFont('Courier New')">Courier New</button>
+
+      <button class="f-btn"
+        onclick="changeFont('Times New Roman')">Times New Roman</button>
+    </div>
+
+  </div>
+
+  <script>
+
+    var box = document.getElementById("myBox");
+
+    function changeBg(colorName) {
+      box.style.backgroundColor = colorName;
+    }
+
+    function changeText(textColor) {
+      box.style.color = textColor;
+    }
+
+    function changeFont(fontName) {
+      box.style.fontFamily = fontName;
+    }
+
+  </script>
+
+</body>
+</html>
